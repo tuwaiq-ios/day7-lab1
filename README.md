@@ -1,4 +1,4 @@
-# Da7 Lab1
+# Day7 Lab1
 
 ## Topics 
 1. ViewController
