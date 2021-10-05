@@ -16,22 +16,40 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return emojis.count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tabelview.dequeueReusableCell(withIdentifier: "1234", for: indexPath) as! CustomCell
         
         
-    cell.customecell.text  = emojis[indexPath.row]
-    if  indexPath.row % 2 == 0{
-        cell.customecell.backgroundColor = UIColor.red
-    }
+        cell.customecell.text  = emojis[indexPath.row]
+        if  indexPath.row % 2 == 0{
+            cell.customecell.backgroundColor = UIColor.systemCyan
+        }
         else
         {
-            cell.customecell.backgroundColor = UIColor.orange
+            cell.customecell.backgroundColor = UIColor.white
         }
-    return cell
-}
-
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let alretcontroller = UIAlertController(
+            title: "welcom to my frist app 😎 ", message: "Hello World 🎉!", preferredStyle: UIAlertController.Style.alert
+        )
+        
+        alretcontroller.addAction(
+            UIAlertAction(
+                title:"Now👀! You Are Our Guset🥳",
+                style:UIAlertAction.Style.default,
+                handler:{ Action in
+                    print ("Hi🤩")
+                })
+            )
+        
+            present(alretcontroller, animated: true, completion: nil)
+    }
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -16,9 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gei-zg-mnA">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gei-zg-mnA">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="1234" rowHeight="47" id="9Pw-Fm-ahn" customClass="CustomCell" customModule="viewtable" customModuleProvider="target">
@@ -54,6 +53,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gei-zg-mnA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GxS-4V-mnq"/>
+                            <constraint firstItem="gei-zg-mnA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="alM-1H-Sa1"/>
+                            <constraint firstItem="gei-zg-mnA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tJR-ON-rdi"/>
+                            <constraint firstItem="gei-zg-mnA" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ukv-Nt-8ef"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="tabelview" destination="gei-zg-mnA" id="Xuw-NK-K5c"/>
