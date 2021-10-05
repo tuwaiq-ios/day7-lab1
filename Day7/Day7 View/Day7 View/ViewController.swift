@@ -15,6 +15,18 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     
     let emojis = [ "👾" , "👻" , "🤓" , "🤖" ]
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let alertController = UIAlertController (title:" wharning", message: "we haved hacked you 😜", preferredStyle: UIAlertController.Style.alert
+    
+        )
+        
+        alertController.addAction(UIAlertAction(title: "pay 500", style: UIAlertAction.Style.default, handler: {ACTION in
+            print("hhhh")
+        }
+        )
+        )
+            present(alertController, animated: true, completion: nil)
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
