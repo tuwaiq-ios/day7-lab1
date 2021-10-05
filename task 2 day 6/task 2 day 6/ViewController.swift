@@ -35,13 +35,16 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let emoji = emojis[indexPath.row]
+        
         let AlertController = UIAlertController (
             
             title: "welcome to my first app", message:"helo world", preferredStyle: UIAlertController.Style.alert)
         
         AlertController.addAction(
             UIAlertAction(
-                title: "ok😎", style: UIAlertAction.Style.default, handler: { ACTION in
+                title: "ok \(emoji)", style: UIAlertAction.Style.default, handler: { ACTION in
                     print ("Hi")
                     
                 })
