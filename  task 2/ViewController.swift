@@ -19,6 +19,27 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
     
     let emojjis = ["👾", "👻" , "🤓" , "🤖" ]
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      
+        let emo = emojjis [ indexPath.row]
+        
+        let AlertController = UIAlertController(
+        
+            title: ("Habibi \(emo)"),
+            message: "We have hacked you 😵‍💫 ",
+            preferredStyle:UIAlertController.Style.alert
+        
+        )
+        AlertController.addAction(UIAlertAction(title: "Pay 499 😌", style: UIAlertAction.Style.cancel, handler: {action in
+            print("thanks")
+        }))
+        
+        
+        AlertController.addAction(UIAlertAction(title: "Pay 500", style: UIAlertAction.Style.default, handler:{ action in
+            print("Hahahahaha")
+        }))
+        present(AlertController, animated: true, completion: nil)
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let emoji = tableView.dequeueReusableCell(withIdentifier: "em", for: indexPath) as! custemCell
         emoji.label.text = emojjis [indexPath.row]
