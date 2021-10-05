@@ -61,7 +61,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="veiw" destination="WVv-zS-JUA" id="8jg-6V-L4X"/>
+                        <outlet property="table" destination="WVv-zS-JUA" id="stK-s0-DxF"/>
+                        <outlet property="view" destination="WVv-zS-JUA" id="iDV-yM-Ofu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
