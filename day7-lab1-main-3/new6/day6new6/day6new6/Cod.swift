@@ -14,6 +14,36 @@ class SallyViewController: UIViewController, UITableViewDelegate,UITableViewData
     
     @IBOutlet weak var tableView: UITableView!
     
+   
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    
+        let emojis = emojes[indexPath.row]
+        let alertController = UIAlertController(title: "wharring",
+        message: "we haved hacked you 🤓😈",
+                                                
+        preferredStyle: UIAlertController.Style.alert
+        )
+    
+//        (title: "Wharring" , message : "We haved hacked you 🤓😈!!!"
+
+    
+        alertController.addAction(
+        UIAlertAction (
+        title : "pay 500",
+        style: UIAlertAction.Style.default,
+        handler: {Action in
+        print ("Handler")
+    } ))
+        present( alertController, animated: true, completion: nil)
+        
+    // UIApplication.shared.keyWindow?.rootViewController?.present(alertController,animated: true , completion: nill)
+}
+
+                                                 
+                                                 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate=self
