@@ -28,6 +28,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         return emjCell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let alertMsg = UIAlertController(title: "Test", message: "we traing", preferredStyle: .alert)
+        
+        alertMsg.addAction(UIAlertAction(title: " What!!! \(alertMsg)",
+                                         style: UIAlertAction.Style.default,
+                                         handler: { ACTION in print("...")
+            
+        }))
+        UIApplication.shared.keyWindow?.rootViewController?.present(alertMsg, animated: true, completion: nil)
+    }
     
 
     
