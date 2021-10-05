@@ -39,7 +39,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
     }
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let alerte = UIAlertController(title: "welcom\(emojis[indexPath.row])",
+                                       message:"hello   world", preferredStyle: .alert )
+        alerte.addAction(UIAlertAction(title: "cancel", style: .default , handler: { action in print("BAY")}))
+        present(alerte, animated: true, completion: nil)
+        
+    }
 
 }
 class CustomCell : UITableViewCell {
@@ -48,5 +54,8 @@ class CustomCell : UITableViewCell {
     @IBOutlet weak var label: UILabel!
 }
 
-
-
+        
+    
+    
+        
+        

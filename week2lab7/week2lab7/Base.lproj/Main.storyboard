@@ -21,28 +21,20 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="123" id="q2p-3N-1qv" customClass="CustomCell" customModule="week2lab7" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="100.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q2p-3N-1qv" id="mGC-w9-vTQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🥰" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaw-k0-fRs">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="100" id="mCi-j9-qoW"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🥰" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vaw-k0-fRs">
+                                                    <rect key="frame" x="0.0" y="-55.5" width="414" height="153"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="49"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="vaw-k0-fRs" secondAttribute="trailing" id="2Kh-wy-Jjd"/>
-                                                <constraint firstItem="vaw-k0-fRs" firstAttribute="leading" secondItem="mGC-w9-vTQ" secondAttribute="leading" id="7Gu-r2-Kjg"/>
-                                                <constraint firstAttribute="bottom" secondItem="vaw-k0-fRs" secondAttribute="bottom" id="I6j-53-hDN"/>
-                                                <constraint firstItem="vaw-k0-fRs" firstAttribute="top" secondItem="mGC-w9-vTQ" secondAttribute="top" id="YyV-yJ-gpK"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="label" destination="vaw-k0-fRs" id="r85-Pn-gTr"/>
@@ -54,10 +46,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mog-Ib-f67" secondAttribute="bottom" id="0lm-Sq-Xli"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mog-Ib-f67" secondAttribute="trailing" id="L72-cx-Lzt"/>
-                            <constraint firstItem="mog-Ib-f67" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="MOf-3T-Ga9"/>
-                            <constraint firstItem="mog-Ib-f67" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="c13-z2-i5M"/>
+                            <constraint firstItem="mog-Ib-f67" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8d5-Un-xzM"/>
+                            <constraint firstItem="mog-Ib-f67" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Nvh-ce-v13"/>
+                            <constraint firstItem="mog-Ib-f67" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="jYq-Ms-d8U"/>
+                            <constraint firstItem="mog-Ib-f67" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nOd-Us-Tjq"/>
                         </constraints>
                     </view>
                     <connections>
@@ -66,7 +58,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="68"/>
+            <point key="canvasLocation" x="-910.14492753623199" y="34.821428571428569"/>
         </scene>
     </scenes>
     <resources>
