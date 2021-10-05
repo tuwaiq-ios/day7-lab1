@@ -18,6 +18,7 @@ class ViewController: UIViewController ,UITableViewDelegate, UITableViewDataSour
   }
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       
+      
     let cell = tableView.dequeueReusableCell(withIdentifier:"123",for: indexPath) as! tableCell
       
     cell.lablecell.text = emojis[indexPath.row]
@@ -28,6 +29,32 @@ class ViewController: UIViewController ,UITableViewDelegate, UITableViewDataSour
       }
     return cell
   }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let emoji = emojis[indexPath.row]
+        
+        let Alertcontroller = UIAlertController(
+            title: "Hello To My First App\(emoji)",
+            message: "Hello World",
+            preferredStyle: UIAlertController.Style.alert)
+    
+    
+       Alertcontroller.addAction(
+        UIAlertAction (
+            title: "OK",
+            style: UIAlertAction.Style.default,
+            handler: { action in
+            print ("done")
+        })
+       )
+    
+    
+     present(Alertcontroller , animated: true, completion: nil)
+        }
+    
+    
     
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -40,11 +67,6 @@ class tableCell:UITableViewCell {
  
     @IBOutlet weak var lablecell: UILabel!
 }
-
-
-
-
-
 
 
 
