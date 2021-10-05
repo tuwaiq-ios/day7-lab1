@@ -35,14 +35,21 @@ class ViewController: UIViewController , UITableViewDelegate ,UITableViewDataSou
         }
         cell.label1.text = emg[indexPath.row]
         return cell
-        
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let alerte = UIAlertController(title: "welcome\(emg[indexPath.row])", message:"Hello World", preferredStyle: .alert)
+        
+        alerte.addAction(UIAlertAction(title: "cancel", style:.default , handler: { action in
+            print("BAY") }))
+            present(alerte, animated: true, completion: nil)
+    }
 }
+
 class customcell : UITableViewCell {
-    
+     
     @IBOutlet weak var label1: UILabel!
     
 }
-
-
+                        
