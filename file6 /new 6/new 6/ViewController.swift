@@ -14,14 +14,14 @@ let emojis = ["👾", "👻", "🤓", "🤖"]
 
 
 class viewcell2: UITableViewCell {
-  
+    
     @IBOutlet weak var label: UILabel!
 }
 
 
 class ViewController: UIViewController , UITableViewDelegate,
                       UITableViewDataSource{
-
+    
     @IBOutlet weak var viewtable2: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,13 +52,19 @@ class ViewController: UIViewController , UITableViewDelegate,
     }
     
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+
+        let alert = UIAlertController(title: "welcom\(emojis[indexPath.row]) !",
+    message: "hello world 🤫",
+    preferredStyle:.alert)
+        
+        
+        alert.addAction (UIAlertAction(title: "cancel" ,style: .default,
+                          handler: {action in print ("bye")}))
     
+            
+            present(alert, animated: true, completion: nil)
 
+            }
 }
-
-
-
-
-
-
-
