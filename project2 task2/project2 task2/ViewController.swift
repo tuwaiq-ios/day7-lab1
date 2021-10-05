@@ -4,14 +4,15 @@
 //
 //  Created by Hassan Yahya on 27/02/1443 AH.
 //
-
+import Foundation
 import UIKit
 
 class ViewController: UIViewController,UITableViewDelegate ,UITableViewDataSource {
      
-    @IBOutlet weak var tableview: UITableView!
-    let emojeies = ["🌞","🌝","🍇","🤌🏻","✍🏽"]
     
+    @IBOutlet weak var myTableView: UITableView!
+    
+    let emojeies = ["🌞","🌝","🍇","🤌🏻","✍🏽"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return emojeies.count
@@ -34,11 +35,35 @@ class ViewController: UIViewController,UITableViewDelegate ,UITableViewDataSourc
         return hh
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let emojei = emojeies [indexPath.row]
+        
+        let AlertController = UIAlertController(
+            title: "OOOOps \(emojei)",
+        message: "Your phone was stolen 💀",
+        preferredStyle: .alert)
+        
+        AlertController.addAction(
+            UIAlertAction(
+                title: "Pay 1000$",
+                style: UIAlertAction.Style.default,
+                handler:{ action in
+                   print("hahahhah")
+              
+                })
+            
+        )
+        present(AlertController, animated: true, completion:nil)
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableview.delegate = self
-        tableview.dataSource = self
+        myTableView.delegate = self
+        myTableView.dataSource = self
     
 
     }
