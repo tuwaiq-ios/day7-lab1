@@ -7,7 +7,8 @@
 
 import UIKit
 
-class viewcontrollerClass : UIViewController,UITableViewDataSource,UITableViewDelegate{
+class viewcontrollerClass :
+    UIViewController,UITableViewDataSource,UITableViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -39,16 +40,44 @@ class viewcontrollerClass : UIViewController,UITableViewDataSource,UITableViewDe
             cell.label.backgroundColor = UIColor.orange
             
         }
-        return cell
+            return cell
     }
     
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+     let emo = emojis [indexPath.row]
+        
+     let alertController = UIAlertController(
+                        title:"waring(\"😱",
+                        message: "we have hacked you😅❌",
+                        preferredStyle: UIAlertController.Style.alert)
+    
+        alertController.addAction(UIAlertAction(
+            title: "pay 500 ",
+            style: UIAlertAction.Style.default,
+            handler: {Action in
+                print("hahaha🤣🤣🤣")
+            })
+        )
+        
+        //
+        alertController.addAction(UIAlertAction(
+            title: "cancel",
+            style: UIAlertAction.Style.cancel,
+            handler: {Action in
+                print("cancel")
+            })
+        )
+                                  
+  present(alertController, animated: true, completion: nil)
+        
+    }
 }
 
 
 class custemcell : UITableViewCell {
     
     @IBOutlet weak var label: UILabel!
-    
     
 }
